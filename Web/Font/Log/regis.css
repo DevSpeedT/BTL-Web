@@ -1,0 +1,128 @@
+/* Reset cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: url("header.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container tổng */
+.container {
+    background: url("Gotobun.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    /* color: #fff; */
+    position: relative;
+    overflow: hidden;
+    /* border: 1px solid #000; */
+}
+
+/* Lớp phủ mờ */
+.container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 0;
+    border-radius: 16px;
+}
+
+.container * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Tiêu đề form */
+.form-title {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Mỗi nhóm input */
+.form-group {
+    margin-bottom: 16px;
+}
+
+/* Label */
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Input và Select */
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fafafa;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Nút đăng ký */
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #ff0790;
+}
+
+/* Link chuyển sang đăng nhập */
+p {
+    text-align: center;
+    margin-top: 16px;
+
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+p span {
+    color: red;
+}
+
+

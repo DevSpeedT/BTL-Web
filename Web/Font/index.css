@@ -1,0 +1,197 @@
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  border: none;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.carousel-control-prev {
+  left: 1rem;
+}
+
+.carousel-control-next {
+  right: 1rem;
+}
+
+
+
+/* Đảm bảo phần danh mục nổi bật, rõ ràng, đồng bộ với Bootstrap */
+.category-section {
+  margin-bottom: 2rem;
+
+}
+
+/* .categorySwiper .swiper-button-prev {
+  left: -10px !important;
+  z-index: 20;
+}
+.categorySwiper .swiper-button-next {
+  right: -10px !important;
+  z-index: 20;
+} */
+
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 24px;
+  width: 100%;
+  padding: 0 50px;
+  padding-top: 12px;
+  box-sizing: border-box;
+  min-height: 320px; /* Đảm bảo đủ chiều cao cho 2 hàng */
+}
+.category-block {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  text-align: center;
+  padding: 18px 8px 10px 8px;
+  transition: transform 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.category-block img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border: 2px solid #f8f9fa;
+  background: #f8f9fa;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.category-block:hover {
+  transform: translateY(-6px) scale(1.06);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+  border-color: #ffc107;
+  background: #fffbe7;
+}
+/* Responsive */
+@media (max-width: 1200px) {
+  .category-grid { grid-template-columns: repeat(6, 1fr); }
+}
+@media (max-width: 900px) {
+  .category-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 600px) {
+  .category-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.swiper-wrapper {
+  overflow: visible !important;
+}
+
+.swiper-slide {
+  overflow: visible !important;
+}
+
+
+
+
+
+/* Nút chuyển slider sản phẩm nổi bật */
+.productSwiper .product-swiper-btn {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  color: #ff5722;
+  border: 2px solid #ff5722;
+  z-index: 10;
+  opacity: 0.95;
+  transition: background 0.2s, color 0.2s;
+}
+.productSwiper .product-swiper-btn:hover {
+  background: #ff5722;
+  color: #fff;
+  border-color: #ff5722;
+  opacity: 1;
+}
+.productSwiper .swiper-button-prev.product-swiper-btn {
+  left: -30px; /* Đẩy ra ngoài khung */
+}
+.productSwiper .swiper-button-next.product-swiper-btn {
+  right: -30px;
+}
+.productSwiper .swiper-button-prev:after,
+.productSwiper .swiper-button-next:after {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+
+
+
+/* Đảm bảo slider không bị thu hẹp */
+.productSwiper .swiper-slide {
+  padding: 10px 0;
+}
+.productSwiper .card {
+  min-width: 180px;
+}
+
+/* Responsive: Đẩy nút vào trong khi màn nhỏ */
+@media (max-width: 900px) {
+  .productSwiper .swiper-button-prev.product-swiper-btn,
+  .productSwiper .swiper-button-next.product-swiper-btn {
+    left: 0;
+    right: 0;
+  }
+}
+
+
+a.text-decoration-none.fw-semibold:hover {
+  text-decoration: underline !important;
+}
+
+
+
+.card.h-100, .card.d-flex {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 340px; /* hoặc giá trị bạn muốn */
+}
+.card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.mt-auto {
+  margin-top: auto !important;
+}
+.sale-product-card {
+  min-width: 200px;
+  max-width: 200px;
+}
+
